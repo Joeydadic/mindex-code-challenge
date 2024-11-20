@@ -2,12 +2,21 @@ package com.mindex.challenge.data;
 
 import java.util.List;
 
+/*
+ * POJO to detail Employee model.
+ */
 public class Employee {
+
     private String employeeId;
+
     private String firstName;
+
     private String lastName;
+
     private String position;
+
     private String department;
+
     private List<Employee> directReports;
 
     public Employee() {
@@ -60,4 +69,21 @@ public class Employee {
     public void setDirectReports(List<Employee> directReports) {
         this.directReports = directReports;
     }
+
+    /*
+     * Override toString() method for Employee as it is used frequently
+     * in logging statements.
+     */
+    @Override
+    public String toString() {
+        return "Employee {" +
+            "employeeId=" + getEmployeeId() + "" +
+            ", firstName=" + getFirstName() + "" +
+            ", lastName=" + getLastName() + "" +
+            ", position=" + getPosition() + "" +
+            ", department=" + getDepartment() + "" +
+            ", directReports=" + getDirectReports() + "" +
+            "}";
+    }
+
 }
